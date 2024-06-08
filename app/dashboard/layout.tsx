@@ -2,7 +2,7 @@
 // https://gist.github.com/Klerith/3949f1c8b884d7101e378dfb668f0f3a
 
 import Link from "next/link";
-
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const links = [
   { name: "accordion", href: "accordion" },
   { name: "alert", href: "alert" },
@@ -11,6 +11,7 @@ const links = [
   { name: "dialog", href: "dialog" },
   { name: "badge", href: "badge" },
   { name: "calendar", href: "calendar" },
+  { name: "avatar", href: "avatar" },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 export default function DashboardLayout({
@@ -99,9 +100,13 @@ export default function DashboardLayout({
             </div>
             <div className="flex items-center">
               {/* User Avatar */}
-              <div className="bg-blue-500 text-white p-2 rounded-full w-12 h-12 flex items-center justify-center">
-                ES
-              </div>
+              <Avatar>
+                <AvatarImage
+                  src="https://github.com/jerick97.png"
+                  alt="@jerick97"
+                />
+                <AvatarFallback>ES</AvatarFallback>
+              </Avatar>
             </div>
           </div>
         </div>
