@@ -9,7 +9,8 @@ const links = [
   { name: "button", href: "button" },
   { name: "alert-dialog", href: "alert-dialog" },
   { name: "dialog", href: "dialog" },
-];
+  { name: "badge", href: "badge" },
+].sort((a, b) => a.name.localeCompare(b.name));
 
 export default function DashboardLayout({
   children,
@@ -98,7 +99,7 @@ export default function DashboardLayout({
             <div className="flex items-center">
               {/* User Avatar */}
               <div className="bg-blue-500 text-white p-2 rounded-full w-12 h-12 flex items-center justify-center">
-                FH
+                ES
               </div>
             </div>
           </div>
